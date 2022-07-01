@@ -1,0 +1,181 @@
+#+title: Introduktion
+#+subtitle: Programmering B
+#+author: Vibenshus Gymnasium
+#+date: 2022
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: night
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background:
+#+reveal_default_slide_background:
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+# #+reveal_extra_attr: style="color:red"
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+* Lidt om mig
+
+* Lidt om Pro B
+
+** De formelle sider :/
+
+** Faglige mål
+#+reveal_html: <div style="font-size: 60%;">
+Eleverne skal kunne:
+- bruge programmering til at undersøge et emne eller problemområde, med henblok på - via programmets funktion - at skabe ny indsigt eller til at løse et problem
+- behandle problemstillinger i samspil med andre fag
+- *anvende avancerede konstruktioner i et programmeringssprog*
+- redegørefor *arkitekturen af programmer på forskellige abstraktionsniveauer*, herunder relationen mellem brug og funktion
+- redegøre for simple *specifiktationsmodeller og realisere disse i simple velstrukturerede* programmer samt teste disse
+- rette, tilpasse og udvide *avancerede programmer*
+- demonstrere viden om fagets identitet og metoder
+- arbejde inkrementelt og systematisk i programmeringsprocessen.
+** Kernestof
+#+reveal_html: <div style="font-size: 60%;">
+Kernestoffet er:
+- programmeringssprog og elementer i programmers opbygning, herunder variabler, typer, udtryk, kontrolstrukturer, parametrisering/abstraktionsmekanismer, rekursion, polymorfi og algoritmemønstre
+- *arkitekturen for programmers interaktion med omgivelserne med henblik på *hændelsesstyret interaktion* og *interaktion mellem systemer*
+- generiske programdele og biblioteksmoduler
+- arbejdsgange og systematik i programmeringsprocessen, herunder *test og fejlfinding*
+- *abstrakte programmeringsbeskrivelser og dokumentation.*
+** Omfang
+#+reveal_html: <div style="font-size: 60%;">
+- 3 lektioner i 2.g
+- 5 lektioner i 3.g
+
+Fordybelsestid
+|                      | Grundforløb | 1.g | 2.g efterår | 2.g forår | 3.g efterår | 3.g forår | Samlet |
+|----------------------+-------------+-----+-------------+-----------+-------------+-----------+--------|
+| FT MED ret           |           2 |   3 |           2 |         3 |           3 |           |     13 |
+| FT UDEN ret          |             |   6 |           3 |         5 |           3 |           |     17 |
+| terminsprøve/projekt |             |     |             |           |             |         8 |      8 |
+|----------------------+-------------+-----+-------------+-----------+-------------+-----------+--------|
+| Samlet               |           2 |   9 |           5 |         8 |           6 |         8 |     38 |
+#+TBLFM: @>$<<..$>>=vsum(@I..@II)::$>=vsum($<<..$>>)
+
+** Logbog
+Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumentationen i logbogen kan have form af f.eks. it-systemer, programmer, noter, synopser, programbeskrivelser og flowcharts.
+** Eksamensprojekt
+#+reveal_html: <div style="font-size: 60%;">
+- 20 timers undervisningstid til sidst i faget.
+- Grupper af 2 til 3 (i særlige tilfælde individuelt)
+- Består af et produkt (kode etc) og en synopsis (rapport).
+- Synopsen skal dokumentere udviklingen af det færdige produkt, maks *5 til 8 normalsider* ekskl. kode, rutediagrammer, bilag mm.
+- Skolen giver nogle projektoplæg, der kan vælge mellem.
+- Eksamensgrupperne skal udarbejde en *fælles projektbeskrivelse* inden for et af projektoplæggene. Projektbeskrivelsen skal *godkendes* af skolen.
+- Synopsen udarbejdes *individuelt*.
+- Synopsis og produkt skal senest afleveres *en uge* før eksamensperioden begynder.
+- Synopsis og produkt indgår i grundlaget for den afsluttende årskarakter.
+- Synopsen rettes og kommenteres *ikke* inden en eventuelt prøve.
+** Eksamen
+- Mundtlig eksamen: Fremlæggelse af *eksamensprojekt* og *opgave med bilag* tildelt ved lodtrækning.
+- Synopser, fortegnelse over eksamensprojekter samt opgaver med bilag *sendes til censor*
+- Problemstillinger drøftes med censor inden eksaminerne.
+- *Forberedelsestid: 60 min*
+- *Eksamenstid: 30 min*
+- Først præsentation af eksamensprojekt med spørgsmål fra eksaminator og censor. Herefter samtale omkring den trukne opgave med bilag.
+- Der gives en samlet karakter ud fra den *mundtlige præstation*, omfattende præsentation af eksamensprojektet og opgaven med bilag.
+- Der skal afleveres *2* eksemplarer af synopserne. Den ene *kan* fremsendes til censor.
+- Produkt og synopsis skal være til rådighed ved eksamen.
+- Elever skal gerne *selv* medbringe udstyr til eksamen.
+- Man må *gerne* anvende internettet i forberedelsen og til eksamen.
+** De sjove sider :)
+Hvordan skal vi så lære at programmere?
+*** Python
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+[[./img/python-logo.png]]
+
+#+begin_src python -n :exports both :results output :eval never-export
+print("Hello world!")
+#+end_src
+
+#+RESULTS:
+: Hello world!
+
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+begin_export html
+<iframe src="https://giphy.com/embed/PjfpYh9oqpd0Q" width="480" height="393" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/walking-monty-python-silly-walks-PjfpYh9oqpd0Q"></a></p>
+#+end_export
+#+reveal_html: </div>
+
+*** Det fundamentale
+#+reveal_html: <div style="font-size: 60%;">
+- Vi skal lege det fundamentale ind vha bibliotektet [[https://api.arcade.academy/en/latest/][~python arcade~]]
+- Vi tager udgangspunkt i bogen [[https://learn.arcade.academy/en/latest/][Arcade Academy - Learn Python]]
+
+Vi skal bl.a. arbejde med
+- Variable og udtryk
+- Funktioner
+- Kontrolsekvenser - løkker og betingelser
+- Lister
+- Klasser, objekter og OOP
+
+  
+*** Udvikling af GUIs
+#+reveal_html: <div style="font-size: 40%;">
+- Vi vil anvende ~PyQt6~ eller ~Pyside6~
+- Eventbaseret programmering vha =signals & slots= i =Qt=
+
+#+begin_src python -n
+import sys
+
+from PyQt6.QtCore import QSize, Qt
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+
+
+# Subclass QMainWindow to customize your application's main window
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("My App")
+
+        button = QPushButton("Press Me!")
+
+        self.setFixedSize(QSize(400, 300))
+
+        # Set the central widget of the Window.
+        self.setCentralWidget(button)
+
+
+app = QApplication(sys.argv)
+
+window = MainWindow()
+window.show()
+
+app.exec()
+#+end_src
+
+#+attr_html: :width 70%
+[[./img/pyqt6_example.png]]
+
+*** Kryptografi
+#+reveal_html: <div style="font-size: 60%;">
+- Introduktion til forskellige krypterings- og dekrypteringsmetoder. Fra det helt simple til RSA-kryptering.
+- Vi vil tage udgangspunkt i bogen [[https://inventwithpython.com/cracking/][Cracking codes with Python]]
+- Her har vi særligt fokus på =algoritmedesign= etc
+
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+begin_src python -n :exports both :results output :eval never-export
+message = 'Three can keep a secret, if two of them are dead.'
+translated = ''
+
+i = len(message) - 1
+while i >= 0:
+    translated = translated + message[i]
+    i = i - 1
+
+print(translated)  
+#+end_src
+
+#+RESULTS:
+: .daed era meht fo owt fi ,terces a peek nac eerhT
+
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+[[./img/cover_crackingcodes_thumb.png]]
+#+reveal_html: </div>
+
+*** TODO Styring af legorobotter
