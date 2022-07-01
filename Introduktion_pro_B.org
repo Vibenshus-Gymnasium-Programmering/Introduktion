@@ -178,4 +178,5 @@ print(translated)
 [[./img/cover_crackingcodes_thumb.png]]
 #+reveal_html: </div>
 
-*** TODO Styring af legorobotter
+*** Styring af legorobotter
+Vi skal lege med legorobotter!
