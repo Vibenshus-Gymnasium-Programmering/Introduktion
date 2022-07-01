@@ -1,46 +1,224 @@
-<!DOCTYPE html>
-<html lang="da">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da">
 <head>
-<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Introduktion</title>
-<meta name="author" content="Vibenshus Gymnasium"/>
-<style type="text/css">
-.underline { text-decoration: underline; }
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+<meta name="author" content="Vibenshus Gymnasium" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/night.css" id="theme"/>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
 </head>
 <body>
-<div class="reveal">
-<div class="slides">
-<section id="sec-title-slide" data-background="">
-<h2>Introduktion</h2><h3>Programmering B</h3><h4>Vibenshus Gymnasium</h4><h4>2022</h4>
-</section>
+<div id="content" class="content">
+<h1 class="title">Introduktion
+<br />
+<span class="subtitle">Programmering B</span>
+</h1>
 
-<section>
-<section id="slide-org86a0c95" data-background="">
-<h2 id="org86a0c95">Lidt om mig</h2>
-
-</section>
-</section>
-<section>
-<section id="slide-orga59768c" data-background="">
-<h2 id="orga59768c">Lidt om Pro B</h2>
-<div class="outline-text-2" id="text-orga59768c">
+<div id="outline-container-org0006211" class="outline-2">
+<h2 id="org0006211">Lidt om mig</h2>
 </div>
-</section>
-<section id="slide-org2e9cede" data-background="">
-<h3 id="org2e9cede">De formelle sider :/</h3>
 
-</section>
-<section id="slide-org27bb655" data-background="">
-<h3 id="org27bb655">Faglige mål</h3>
-<div style="font-size: 60%;">
+<div id="outline-container-org9279e21" class="outline-2">
+<h2 id="org9279e21">Lidt om Pro B</h2>
+<div class="outline-text-2" id="text-org9279e21">
+</div>
+<div id="outline-container-org0d48757" class="outline-3">
+<h3 id="org0d48757">De formelle sider :/</h3>
+</div>
+
+<div id="outline-container-org62d1e48" class="outline-3">
+<h3 id="org62d1e48">Faglige mål</h3>
+<div class="outline-text-3" id="text-org62d1e48">
 <p>
 Eleverne skal kunne:
 </p>
-<ul>
+<ul class="org-ul">
 <li>bruge programmering til at undersøge et emne eller problemområde, med henblok på - via programmets funktion - at skabe ny indsigt eller til at løse et problem</li>
 <li>behandle problemstillinger i samspil med andre fag</li>
 <li><b>anvende avancerede konstruktioner i et programmeringssprog</b></li>
@@ -49,31 +227,30 @@ Eleverne skal kunne:
 <li>rette, tilpasse og udvide <b>avancerede programmer</b></li>
 <li>demonstrere viden om fagets identitet og metoder</li>
 <li>arbejde inkrementelt og systematisk i programmeringsprocessen.</li>
-
 </ul>
-</section>
-<section id="slide-org9ba31f0" data-background="">
-<h3 id="org9ba31f0">Kernestof</h3>
-<div style="font-size: 60%;">
+</div>
+</div>
+<div id="outline-container-org5ee37e4" class="outline-3">
+<h3 id="org5ee37e4">Kernestof</h3>
+<div class="outline-text-3" id="text-org5ee37e4">
 <p>
 Kernestoffet er:
 </p>
-<ul>
+<ul class="org-ul">
 <li>programmeringssprog og elementer i programmers opbygning, herunder variabler, typer, udtryk, kontrolstrukturer, parametrisering/abstraktionsmekanismer, rekursion, polymorfi og algoritmemønstre</li>
 <li><b>arkitekturen for programmers interaktion med omgivelserne med henblik på *hændelsesstyret interaktion</b> og <b>interaktion mellem systemer</b></li>
 <li>generiske programdele og biblioteksmoduler</li>
 <li>arbejdsgange og systematik i programmeringsprocessen, herunder <b>test og fejlfinding</b></li>
 <li><b>abstrakte programmeringsbeskrivelser og dokumentation.</b></li>
-
 </ul>
-</section>
-<section id="slide-org2d7b56d" data-background="">
-<h3 id="org2d7b56d">Omfang</h3>
-<div style="font-size: 60%;">
-<ul>
+</div>
+</div>
+<div id="outline-container-orgfe2e2a8" class="outline-3">
+<h3 id="orgfe2e2a8">Omfang</h3>
+<div class="outline-text-3" id="text-orgfe2e2a8">
+<ul class="org-ul">
 <li>3 lektioner i 2.g</li>
 <li>5 lektioner i 3.g</li>
-
 </ul>
 
 <p>
@@ -158,18 +335,21 @@ Fordybelsestid
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 
-</section>
-<section id="slide-org08f030a" data-background="">
-<h3 id="org08f030a">Logbog</h3>
+<div id="outline-container-org5e91024" class="outline-3">
+<h3 id="org5e91024">Logbog</h3>
+<div class="outline-text-3" id="text-org5e91024">
 <p>
 Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumentationen i logbogen kan have form af f.eks. it-systemer, programmer, noter, synopser, programbeskrivelser og flowcharts.
 </p>
-</section>
-<section id="slide-org2eeb18c" data-background="">
-<h3 id="org2eeb18c">Eksamensprojekt</h3>
-<div style="font-size: 60%;">
-<ul>
+</div>
+</div>
+<div id="outline-container-orge624fe5" class="outline-3">
+<h3 id="orge624fe5">Eksamensprojekt</h3>
+<div class="outline-text-3" id="text-orge624fe5">
+<ul class="org-ul">
 <li>20 timers undervisningstid til sidst i faget.</li>
 <li>Grupper af 2 til 3 (i særlige tilfælde individuelt)</li>
 <li>Består af et produkt (kode etc) og en synopsis (rapport).</li>
@@ -180,12 +360,13 @@ Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumen
 <li>Synopsis og produkt skal senest afleveres <b>en uge</b> før eksamensperioden begynder.</li>
 <li>Synopsis og produkt indgår i grundlaget for den afsluttende årskarakter.</li>
 <li>Synopsen rettes og kommenteres <b>ikke</b> inden en eventuelt prøve.</li>
-
 </ul>
-</section>
-<section id="slide-org500d166" data-background="">
-<h3 id="org500d166">Eksamen</h3>
-<ul>
+</div>
+</div>
+<div id="outline-container-org78e32fb" class="outline-3">
+<h3 id="org78e32fb">Eksamen</h3>
+<div class="outline-text-3" id="text-org78e32fb">
+<ul class="org-ul">
 <li>Mundtlig eksamen: Fremlæggelse af <b>eksamensprojekt</b> og <b>opgave med bilag</b> tildelt ved lodtrækning.</li>
 <li>Synopser, fortegnelse over eksamensprojekter samt opgaver med bilag <b>sendes til censor</b></li>
 <li>Problemstillinger drøftes med censor inden eksaminerne.</li>
@@ -197,26 +378,26 @@ Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumen
 <li>Produkt og synopsis skal være til rådighed ved eksamen.</li>
 <li>Elever skal gerne <b>selv</b> medbringe udstyr til eksamen.</li>
 <li>Man må <b>gerne</b> anvende internettet i forberedelsen og til eksamen.</li>
-
 </ul>
-</section>
-<section id="slide-orgc6c56f1" data-background="">
-<h3 id="orgc6c56f1">De sjove sider :)</h3>
+</div>
+</div>
+<div id="outline-container-org51af552" class="outline-3">
+<h3 id="org51af552">De sjove sider :)</h3>
+<div class="outline-text-3" id="text-org51af552">
 <p>
 Hvordan skal vi så lære at programmere?
 </p>
-</section>
-<section id="slide-org757493a" data-background="">
-<h4 id="org757493a">Python</h4>
-<div class="column" style="float:left; width: 50%">
+</div>
+<div id="outline-container-org33f6909" class="outline-4">
+<h4 id="org33f6909">Python</h4>
+<div class="outline-text-4" id="text-org33f6909">
 
-<div id="org0fcb659" class="figure">
+<div id="orge8af7bc" class="figure">
 <p><img src="./img/python-logo.png" alt="python-logo.png" />
 </p>
 </div>
 
 <div class="org-src-container">
-
 <pre class="src src-python"><span class="linenr">1: </span><span style="color: #f78fe7; font-weight: bold;">print</span><span style="color: #ffffff;">(</span><span style="color: #00c06f;">"Hello world!"</span><span style="color: #ffffff;">)</span>
 </pre>
 </div>
@@ -226,47 +407,41 @@ Hello world!
 </pre>
 
 
-</div>
-
-<div class="column" style="float:right; width: 50%">
 <iframe src="https://giphy.com/embed/PjfpYh9oqpd0Q" width="480" height="393" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/walking-monty-python-silly-walks-PjfpYh9oqpd0Q"></a></p>
 </div>
+</div>
 
-</section>
-<section id="slide-org87165c5" data-background="">
-<h4 id="org87165c5">Det fundamentale</h4>
-<div style="font-size: 60%;">
-<ul>
+<div id="outline-container-org2c1b44b" class="outline-4">
+<h4 id="org2c1b44b">Det fundamentale</h4>
+<div class="outline-text-4" id="text-org2c1b44b">
+<ul class="org-ul">
 <li>Vi skal lege det fundamentale ind vha bibliotektet <a href="https://api.arcade.academy/en/latest/"><code>python arcade</code></a></li>
 <li>Vi tager udgangspunkt i bogen <a href="https://learn.arcade.academy/en/latest/">Arcade Academy - Learn Python</a></li>
-
 </ul>
 
 <p>
 Vi skal bl.a. arbejde med
 </p>
-<ul>
+<ul class="org-ul">
 <li>Variable og udtryk</li>
 <li>Funktioner</li>
 <li>Kontrolsekvenser - løkker og betingelser</li>
 <li>Lister</li>
 <li>Klasser, objekter og OOP</li>
-
 </ul>
+</div>
+</div>
 
 
-</section>
-<section id="slide-org277cd5a" data-background="">
-<h4 id="org277cd5a">Udvikling af GUIs</h4>
-<div style="font-size: 40%;">
-<ul>
+<div id="outline-container-orgbad7427" class="outline-4">
+<h4 id="orgbad7427">Udvikling af GUIs</h4>
+<div class="outline-text-4" id="text-orgbad7427">
+<ul class="org-ul">
 <li>Vi vil anvende <code>PyQt6</code> eller <code>Pyside6</code></li>
 <li>Eventbaseret programmering vha <code>signals &amp; slots</code> i <code>Qt</code></li>
-
 </ul>
 
 <div class="org-src-container">
-
 <pre class="src src-python"><span class="linenr"> 1: </span><span style="color: #b6a0ff; font-weight: bold;">import</span> sys
 <span class="linenr"> 2: </span>
 <span class="linenr"> 3: </span><span style="color: #b6a0ff; font-weight: bold;">from</span> PyQt6.QtCore <span style="color: #b6a0ff; font-weight: bold;">import</span> QSize, Qt
@@ -298,26 +473,24 @@ Vi skal bl.a. arbejde med
 </div>
 
 
-<div id="orgef6b537" class="figure">
+<div id="org25fc252" class="figure">
 <p><img src="./img/pyqt6_example.png" alt="pyqt6_example.png" width="70%" />
 </p>
 </div>
+</div>
+</div>
 
-</section>
-<section id="slide-org02331fe" data-background="">
-<h4 id="org02331fe">Kryptografi</h4>
-<div style="font-size: 60%;">
-<ul>
+<div id="outline-container-org123c650" class="outline-4">
+<h4 id="org123c650">Kryptografi</h4>
+<div class="outline-text-4" id="text-org123c650">
+<ul class="org-ul">
 <li>Introduktion til forskellige krypterings- og dekrypteringsmetoder. Fra det helt simple til RSA-kryptering.</li>
 <li>Vi vil tage udgangspunkt i bogen <a href="https://inventwithpython.com/cracking/">Cracking codes with Python</a></li>
 <li>Her har vi særligt fokus på <code>algoritmedesign</code> etc</li>
-
 </ul>
 
 
-<div class="column" style="float:left; width: 50%">
 <div class="org-src-container">
-
 <pre class="src src-python"><span class="linenr">1: </span><span style="color: #00d3d0;">message</span> = <span style="color: #00c06f;">'Three can keep a secret, if two of them are dead.'</span>
 <span class="linenr">2: </span><span style="color: #00d3d0;">translated</span> = <span style="color: #00c06f;">''</span>
 <span class="linenr">3: </span>
@@ -335,58 +508,24 @@ Vi skal bl.a. arbejde med
 </pre>
 
 
-</div>
 
-<div class="column" style="float:right; width: 50%">
-
-<div id="org4abd145" class="figure">
+<div id="org178ce73" class="figure">
 <p><img src="./img/cover_crackingcodes_thumb.png" alt="cover_crackingcodes_thumb.png" />
 </p>
 </div>
 </div>
+</div>
 
-</section>
-<section id="slide-org512351b" data-background="">
-<h4 id="org512351b"></h4>
-</section>
-</section>
+<div id="outline-container-orgf6fed79" class="outline-4">
+<h4 id="orgf6fed79"><span class="todo TODO">TODO</span> Styring af legorobotter</h4>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
-<script>
-// Full list of configuration options available here:
-// https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-
-controls: true,
-progress: true,
-history: false,
-center: false,
-slideNumber: 'c/t',
-rollingLinks: false,
-keyboard: true,
-mouseWheel: false,
-fragmentInURL: false,
-hashOneBasedIndex: false,
-pdfSeparateFragments: true,
-overview: true,
-
-transition: 'slide',
-transitionSpeed: 'default',
-slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
-
-// Plugins with reveal.js 4.x
-plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
-
-// Optional libraries used to extend reveal.js
-dependencies: [
-]
-
-});
-</script>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Dato: 2022</p>
+<p class="author">Forfatter: Vibenshus Gymnasium</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>
