@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+      
       - name: Rename to index.html
-        run: cp ./Introduktion_pro_B.html index.html
+        run: cp Introduktion_pro_B.html index.html
