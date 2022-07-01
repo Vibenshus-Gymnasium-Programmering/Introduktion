@@ -10,4 +10,4 @@ jobs:
 
     steps:
       - name: Rename to index.html
-        run: cp Introduktion_pro_B.html index.html
+        run: cp ./Introduktion_pro_B.html index.html
