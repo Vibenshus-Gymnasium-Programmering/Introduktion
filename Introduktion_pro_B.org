@@ -1,11 +1,11 @@
 #+title: Introduktion
 #+subtitle: Programmering B
 #+author: Vibenshus Gymnasium
-#+date: 2022
+#+date: 2022 - 2024
 # Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
 #+reveal_theme: night
 #+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
-#+reveal_title_slide_background:
+#+reveal_title_slide_background: ./img/programmering_forside.jpg
 #+reveal_default_slide_background:
 #+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
 # #+reveal_extra_attr: style="color:red"
@@ -13,9 +13,69 @@
 
 * Lidt om mig
 
+** Matematik
+#+html: <font size=5>
+For funktionen af to variable  
+
+$$f(x,y) = 2 x^3 y^2+y^3\,,$$
+
+er de første- og anden-afledte følgende:
+
+$$\frac{\partial f}{\partial x} = 6 x^2 \quad , \quad \frac{\partial f}{\partial y} = 4 x^3 y + 3 y^2$$
+
+og 
+
+$$\frac{\partial^2f }{\partial x^2} = 12 xy^2 \quad , \quad \frac{\partial^2 f}{\partial y^2} = 4 x^3 + 6 y \quad , \quad \frac{\partial^2 f}{\partial x \partial y} = 12 x^2y \quad , \quad \frac{\partial^2 f}{\partial y \partial x} = 12 x^2 y\,.$$
+
+#+html: </font size>
+
+** Fysik
+
+#+attr_html: :width 40% :align left
+[[file:img/atlas.jpg]]
+
+#+attr_html: :width 40% :align right
+[[file:img/feynman.png]] 
+
+** Astronomi
+#+attr_html: :width 80%
+[[./img/astronomi.jpg]]
+
+** Open source evangelist
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+- Jeg kan ikke fikse jeres windowsproblemer. (Jeg har ikke brugt windows i 18 år)
+- Men jeg kan hurtigt installere en GNU/Linux-distribution på jeres computere!
+- Benytter selv openSUSE Tumbleweed
+
+
+[[./img/opensuse.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+- Forsøger at klare alt med =GNU Emacs= og =org mode=.
+- Anvender dog =vim= keybindings vha EVIL.
+
+
+[[./img/emacs.png]]
+[[./img/orgmode.png]]
+#+reveal_html: </div>
+
+** Bor på Amager
+- Genbo til ITU (IT Universitet)
+- Lejligheden er ofte i TV-Avisen.
+
+
+[[./img/amager.png]]
+
+
+** Med kone og tre børn
+#+attr_html: :width 80%
+[[./img/Familien.jpg]]
 * Lidt om Pro B
 
-** De formelle sider :/
+* De formelle sider :/
+[[./img/boring_books.jpg]]
 
 ** Faglige mål
 #+reveal_html: <div style="font-size: 60%;">
@@ -32,7 +92,7 @@ Eleverne skal kunne:
 #+reveal_html: <div style="font-size: 60%;">
 Kernestoffet er:
 - programmeringssprog og elementer i programmers opbygning, herunder variabler, typer, udtryk, kontrolstrukturer, parametrisering/abstraktionsmekanismer, rekursion, polymorfi og algoritmemønstre
-- *arkitekturen for programmers interaktion med omgivelserne med henblik på *hændelsesstyret interaktion* og *interaktion mellem systemer*
+- *arkitekturen for programmers interaktion med omgivelserne* med henblik på *hændelsesstyret interaktion* og *interaktion mellem systemer*
 - generiske programdele og biblioteksmoduler
 - arbejdsgange og systematik i programmeringsprocessen, herunder *test og fejlfinding*
 - *abstrakte programmeringsbeskrivelser og dokumentation.*
@@ -52,7 +112,7 @@ Fordybelsestid
 #+TBLFM: @>$<<..$>>=vsum(@I..@II)::$>=vsum($<<..$>>)
 
 ** Logbog
-Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumentationen i logbogen kan have form af f.eks. it-systemer, programmer, noter, synopser, programbeskrivelser og flowcharts.
+Den enkelte elev dokumenterer løbende sin faglige udvikling i en logbog. Dokumentationen i logbogen kan have form af f.eks. it-systemer, programmer, noter, synopser, programbeskrivelser og flowcharts.
 ** Eksamensprojekt
 #+reveal_html: <div style="font-size: 60%;">
 - 20 timers undervisningstid til sidst i faget.
@@ -66,6 +126,7 @@ Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumen
 - Synopsis og produkt indgår i grundlaget for den afsluttende årskarakter.
 - Synopsen rettes og kommenteres *ikke* inden en eventuelt prøve.
 ** Eksamen
+#+reveal_html: <div style="font-size: 60%;">
 - Mundtlig eksamen: Fremlæggelse af *eksamensprojekt* og *opgave med bilag* tildelt ved lodtrækning.
 - Synopser, fortegnelse over eksamensprojekter samt opgaver med bilag *sendes til censor*
 - Problemstillinger drøftes med censor inden eksaminerne.
@@ -77,9 +138,35 @@ Den enkelte elev dokumenterer løbende sin falige udvikling i en logbog. Dokumen
 - Produkt og synopsis skal være til rådighed ved eksamen.
 - Elever skal gerne *selv* medbringe udstyr til eksamen.
 - Man må *gerne* anvende internettet i forberedelsen og til eksamen.
-** De sjove sider :)
+* De sjove sider :)
 Hvordan skal vi så lære at programmere?
-*** Python
+
+[[./img/having_fun_programming.png]]
+
+** Git
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+- Vi kommer til at arbejde meget med =git=.
+  - Logbøger
+  - Opgaver
+  - Afleveringer
+  - Præsentationer 
+- I skal bruge en =github=​-konto
+  - som skal linkes til =github classroom=
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 50%
+[[./img/git.png]]
+
+#+attr_html: :width 50%
+[[./img/GitHub-Logo.png]]
+
+#+attr_html: :width 50%
+[[./img/github_classroom.png]]
+#+reveal_html: </div>
+
+** Python
 #+reveal_html: <div class="column" style="float:left; width: 50%">
 [[./img/python-logo.png]]
 
@@ -98,20 +185,28 @@ print("Hello world!")
 #+end_export
 #+reveal_html: </div>
 
-*** Det fundamentale
+** Det fundamentale
 #+reveal_html: <div style="font-size: 60%;">
 - Vi skal lege det fundamentale ind vha bibliotektet [[https://api.arcade.academy/en/latest/][~python arcade~]]
 - Vi tager udgangspunkt i bogen [[https://learn.arcade.academy/en/latest/][Arcade Academy - Learn Python]]
 
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
 Vi skal bl.a. arbejde med
 - Variable og udtryk
 - Funktioner
 - Kontrolsekvenser - løkker og betingelser
 - Lister
 - Klasser, objekter og OOP
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+[[./img/sprites_bullet.gif]]
+#+reveal_html: </div>
+
 
   
-*** Udvikling af GUIs
+** Udvikling af GUIs
 #+reveal_html: <div style="font-size: 40%;">
 - Vi vil anvende ~PyQt6~ eller ~Pyside6~
 - Eventbaseret programmering vha =signals & slots= i =Qt=
@@ -149,7 +244,7 @@ app.exec()
 #+attr_html: :width 70%
 [[./img/pyqt6_example.png]]
 
-*** Kryptografi
+** Kryptografi
 #+reveal_html: <div style="font-size: 60%;">
 - Introduktion til forskellige krypterings- og dekrypteringsmetoder. Fra det helt simple til RSA-kryptering.
 - Vi vil tage udgangspunkt i bogen [[https://inventwithpython.com/cracking/][Cracking codes with Python]]
@@ -178,5 +273,124 @@ print(translated)
 [[./img/cover_crackingcodes_thumb.png]]
 #+reveal_html: </div>
 
-*** Styring af legorobotter
-Vi skal lege med legorobotter!
+** Styring af legorobotter
+#+reveal_html: <div style="font-size: 60%;">
+- Vi skal bygge (simple) legorobotter
+- og styre dem vha ~python~.
+- Vi kommer formentligt til at anvende [[https://pybricks.com/][pybricks]] og [[https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set/5003400#lego-mindstorms-education-ev3][Lego Mindstorms EV3]]
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+[[./img/pybrick.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+[[./img/mindstorms_ev3.png]]
+#+reveal_html: </div>
+
+** Kunstig intelligens og Machine Learning
+#+reveal_html: <div style="font-size: 60%;">
+- Hvis tiden tillader det, skal vi også arbejde med Machine Learning af en eller anden art.
+- Det er jo frygteligt populært for tiden.
+
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_html: :width 60%
+[[./img/neural_network.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+[[./img/machine_learning.jpg]]
+#+reveal_html: </div>
+
+
+* Godt, skal vi så komme i gang?
+
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/RZXi7ULmJH8" title="Godt, skal vi så komme i gang?!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+* Fagets hjemmeside
+#+reveal_html: <div style="font-size: 60%;">
+Som et lille eksperiment vil jeg forsøge at holde jer opdateret på en lille hjemmeside, som jeg leger lidt med. (Det er faktisk bare en org mode-fil, som er eksporteret til html og lagt på nettet vha github pages. Det er utroligt, hvad man kan klare fra emacs.)
+
+
+Find den her: [[https://vibenshus-gymnasium-programmering.github.io/]]
+
+
+Her vil I kunne finde lektionsbeskrivelser, links til præsenationer (inkl. denne) og opgaver, samt undervisningsbeskrivelser. Måske kommer der mere til senere.
+* Programmer, vi skal bruge
+#+attr_html: :width 40%
+[[./img/vi_skal_bruge.png]]
+* Git
+
+#+attr_html: :width 80%
+[[./img/git.png]]
+
+** Download og installation
+#+reveal_html: <div style="font-size: 60%;">
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+- Besøg [[https://git-scm.com/downloads]] 
+- Download den version, der passer til jeres operativsystem.
+- Følg vejledningen i installationsprogrammet.
+- Vi kommer i første omgang til at anvende kommandolinjen, men man også installere grafiske brugerflader. Hvis I vælger dette, må I selv vælge, hvilken I vil anvende.
+- Der kommer også til at være understøttelse af git i de IDE'er, I kan vælge mellem.
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 80%
+[[./img/git_download.png]]
+#+reveal_html: </div>
+
+* Python
+
+#+attr_html: :width 80%
+[[./img/python-logo.png]]
+
+** Download og installation
+
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+- Besøg [[https://www.python.org/downloads/]]
+- Download den version af python, som passer til jeres operativsystem.
+- Bare vælg det højeste versionsnummer.
+- Hvis man anvender et 32-bit operativsystem, så kan dette også vælges ved at lede lidt på siden.
+- Når I installerer python vha installationsprogrammet, er det vigtigt, at I tilføjer python til jeres "PATH"
+#+reveal_html: </div>
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 100%
+[[./img/python_installation.png]]
+#+reveal_html: </div>
+
+  
+* Editorer og IDE'er
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_html: :width 45%
+[[./img/pycharm_logo.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 45%
+[[./img/vs_code.jpg]]
+#+reveal_html: </div>
+
+
+#+reveal_html: <div style="font-size: 60%;">
+eller måske (Hvis I er meget nørdede)
+
+#+attr_html: :width 20%
+[[./img/emacs.png]]
+
+** Pycharm
+#+reveal_html: <div style="font-size: 60%;">
+- Jetbrains udgiver en række af IDE'er til forskellige sprog. Til =python= hedder deres IDE =PyCharm=.
+- Download PyCharm her: [[https://www.jetbrains.com/pycharm/download/]]
+- Vælg *Community*.
+- Følg installationsvejledningen.
+
+** Visual Studio Code
+#+reveal_html: <div style="font-size: 60%;">
+- Måske bruger I allerede vs code. Hvis I gør, så skal I ikke rigtig gøre andet. :)
+- Ellers kan det hentes her: [[https://code.visualstudio.com/]]
+- Følg installationsvejledningen.
+- (En open source evangelist ville til enhver tid vælge [[https://vscodium.com/][vs codium]] i stedet for, eller editorer som [[https://www.vim.org][vim]] eller som mig [[https://www.gnu.org/software/emacs/][emacs]]. Men så nørdet behøver man ikke at være for at være med på holdet. :))
