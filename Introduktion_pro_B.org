@@ -80,7 +80,7 @@ $$\frac{\partial^2f }{\partial x^2} = 12 xy^2 \quad , \quad \frac{\partial^2 f}{
 ** Faglige mål
 #+reveal_html: <div style="font-size: 60%;">
 Eleverne skal kunne:
-- bruge programmering til at undersøge et emne eller problemområde, med henblok på - via programmets funktion - at skabe ny indsigt eller til at løse et problem
+- bruge programmering til at undersøge et emne eller problemområde, med henblik på - via programmets funktion - at skabe ny indsigt eller til at løse et problem
 - behandle problemstillinger i samspil med andre fag
 - *anvende avancerede konstruktioner i et programmeringssprog*
 - redegørefor *arkitekturen af programmer på forskellige abstraktionsniveauer*, herunder relationen mellem brug og funktion
